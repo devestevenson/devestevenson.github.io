@@ -74,7 +74,7 @@ footer {
 #check {
     display: none;
 }
-.plus {
+label {
     position: relative;
     width: 80px;
     height: 80px;
@@ -90,10 +90,10 @@ footer {
     transition: all 300ms ease-in;
     cursor: pointer;
 }
-.plus:hover {
+label:hover {
     transform: scale(1.1);
 }
-.plus::before {
+label::before {
     content: "🡥";
     position: absolute;
     width: 100%;
@@ -107,7 +107,7 @@ footer {
 
     opacity: 0;
 }
-#check:checked ~ .plus::before {
+#check:checked ~ label::before {
     opacity: 1;
 }
 .icons {
@@ -140,6 +140,9 @@ footer {
 
 /* ----- Responsive ----- */
 @media (max-width: 1280px) {
+    main {
+        height: auto;
+    }
     .title {
         max-width: 500px;
     }
@@ -157,7 +160,7 @@ footer {
         border-radius: 30px;
 
         position: absolute;
-        top: 126px;
+        top: 110px;
     }
     .title {
         max-width: 600px;
