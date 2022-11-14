@@ -94,7 +94,7 @@ label:hover {
     transform: scale(1.1);
 }
 label::before {
-    content: "🡥";
+    content: "×";
     position: absolute;
     width: 100%;
     height: 100%;
@@ -130,7 +130,7 @@ label::before {
     justify-content: center;
     align-items: center;
 
-    transition: all 300ms ease-in;
+    transition: all 120ms ease-in;
 }
 .icons a:hover {
     transform: scale(1.1);
