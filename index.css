@@ -16,14 +16,17 @@ body {
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
-main {
+/* main {
     height: 100vh;
     display: flex;
     align-items: center;
-}
+    justify-content: center;
+} */
 .content {
     width: 90%;
-    margin: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 40px 0;
 }
 .name,
 .title,
@@ -144,14 +147,10 @@ label::before {
 
 /* ----- Responsive ----- */
 @media (max-width: 1280px) {
-    main {
-        height: auto;
-    }
     .title {
         max-width: 500px;
     }
 }
-
 @media (max-width: 900px) {
     section {
         flex-direction: column;
@@ -164,7 +163,7 @@ label::before {
         border-radius: 30px;
 
         position: absolute;
-        top: 110px;
+        top: 150px;
     }
     .title {
         max-width: 600px;
@@ -176,7 +175,6 @@ label::before {
         margin-bottom: 60px;
     }
 }
-
 @media (max-width: 660px) {
     .title {
         max-width: 100%;
@@ -186,7 +184,6 @@ label::before {
         max-width: 400px;
     }
 }
-
 @media (max-width: 530px) {
     .title {
         max-width: 100%;
