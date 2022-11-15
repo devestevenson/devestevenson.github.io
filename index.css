@@ -16,12 +16,6 @@ body {
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
-/* main {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 .content {
     width: 90%;
     height: auto;
@@ -199,6 +193,9 @@ label::before {
         width: 40px;
         height: 40px;
         font-size: 20px;
+    }
+    .icons .cuvi {
+        font-size: 16px;
     }
 }
 @media (max-width: 400px) {
