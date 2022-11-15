@@ -135,13 +135,16 @@ label::before {
 
     transition: all 120ms ease-in;
 }
+.icons .cuvi {
+    font-size: 18px;
+    font-weight: 800;
+}
 .icons a:hover {
     transform: scale(1.1);
     background-color: var(--green);
 }
 #check:checked ~ .icons {
     opacity: 1;
-    pointer-events: auto;
 }
 
 
