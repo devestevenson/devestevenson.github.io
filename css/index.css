@@ -8,13 +8,14 @@
 :root {
     --white: #FFFFFF;
     --gray: #707070;
-    --black: #111111;
+    --black: #1A1A1A;
   --gold: #FFD700;
   --green: #00ff7f;
 }
 body {
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
+  scroll-behavior: smooth;
 }
 .content {
     width: 90%;
@@ -28,10 +29,12 @@ body {
     color: var(--black);
 }
 .name {
+    font-size: 24px;
     margin-bottom: 6px;
 }
 .profession {
     color: var(--gray);
+    margin-left: 16px;
 }
 section {
     display: flex;
@@ -118,10 +121,11 @@ footer {
 .icons a {
     width: 50px;
     height: 50px;
-    background-color: var(--black);
+    /* background-color: var(--black); */
     border-radius: 50%;
-    color: var(--white);
+    color: var(--black);
     font-size: 30px;
+    border: 1px solid var(--black);
 
     display: flex;
     justify-content: center;
@@ -135,7 +139,8 @@ footer {
 }
 .icons a:hover {
     transform: scale(1.1);
-    background-color: var(--green);
+    background-color: var(--black);
+    color: var(--white);
 }
 #check:checked ~ .icons {
     opacity: 1;
