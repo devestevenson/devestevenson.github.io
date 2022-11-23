@@ -19,7 +19,7 @@ window.sr = ScrollReveal();
         distance: '40px',
         easing: 'ease',
     });
-    sr.reveal('.info', {
+    sr.reveal('.footer-box', {
         duration: 4000,
         origin: 'top',
         distance: '60px',

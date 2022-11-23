@@ -10,7 +10,7 @@
     --gray: #707070;
     --black: #1A1A1A;
   --gold: #FFD700;
-  --green: #00ff7f;
+  --green: springgreen;
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -20,7 +20,7 @@ body {
 .content {
     width: 90%;
     height: auto;
-    margin: 0 auto;
+    margin: auto;
     padding: 40px 0;
 }
 .name,
@@ -35,8 +35,12 @@ body {
 .profession {
     color: var(--gray);
     margin-left: 16px;
+    transition: all 500ms ease;
 }
-section {
+.profession:hover {
+    color: var(--green);
+}
+.profile-and-photo {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,83 +72,64 @@ section {
 }
 
 
-footer {
+.footer-box {
+    width: 290px;
     display: flex;
+    align-items: center;
 }
-#check {
-    display: none;
-}
-.plus {
-    position: relative;
+#button-plus {display: none;}
+.ph-plus-thin {
     width: 80px;
     height: 80px;
     background-color: var(--white);
-    border-radius: 40px;
     color: var(--black);
-    font-size: 50px;
-    font-weight: lighter;
-
+    font-size: 40px;
+    z-index: 1;
+}
+.social-media {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    cursor: pointer;
+    margin-left: 10px;
 }
-.plus:hover {
-    transform: scale(1.1);
-}
-.plus::before {
-    content: "×";
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.icons {
+    width: 54px;
+    height: 54px;
     background-color: var(--white);
-    border-radius: 40px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    color: var(--black);
+    font-size: 30px;
+    margin-left: -20px;
     opacity: 0;
+    visibility: hidden;
 }
-#check:checked ~ .plus::before {
-    opacity: 1;
+.icons:hover {
+    background-color: var(--white);
 }
+.ph-github-logo:hover {
+    color: #0A1860;
+    z-index: 3;
+}
+.ph-dribbble-logo:hover {
+    color: #EA4C89;
+    z-index: 2;
+}
+.ph-linkedin-logo:hover {
+    color: #0274B3;
+    z-index: 1;
+}
+.ph-plus-thin,
 .icons {
     display: flex;
     align-items: center;
-    gap: 10px;
-    border-radius: 30px;
-    padding: 0 20px;
-    opacity: 0;
-}
-.icons a {
-    width: 50px;
-    height: 50px;
-    /* background-color: var(--black); */
-    border-radius: 50%;
-    color: var(--white);
-    font-size: 30px;
-    border: 1px solid var(--white);
-
-    display: flex;
     justify-content: center;
-    align-items: center;
-
-    transition: all 120ms ease-in;
+    border-radius: 50%;
+    transition: all 500ms ease;
 }
-.icons .cuvi {
-    font-size: 18px;
-    font-weight: 800;
-}
-.icons a:hover {
-    transform: scale(1.1);
-    background-color: var(--white);
-    color: var(--black);
-}
-#check:checked ~ .icons {
+#button-plus:checked ~ .social-media .icons {
+    margin-left: 10px;
     opacity: 1;
-    transition: all 300ms ease-in;
+    visibility: visible;
+}
+#button-plus:checked ~ .ph-plus-thin {
+    transform: rotate(135deg);
 }
 
 
@@ -155,7 +140,7 @@ footer {
     }
 }
 @media (max-width: 900px) {
-    section {
+    .profile-and-photo {
         flex-direction: column;
         align-items: flex-start;
         margin-top: 280px;
@@ -195,14 +180,6 @@ footer {
     .paragraph {
         font-size: 18px;
     }
-    .icons a {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-    }
-    .icons .cuvi {
-        font-size: 14px;
-    }
 }
 @media (max-width: 400px) {
     .title {
@@ -210,10 +187,6 @@ footer {
     }
     .paragraph {
         font-size: 16px;
-    }
-    .icons a {
-        width: 30px;
-        height: 30px;
     }
 }
 @media (max-width: 340px) {
