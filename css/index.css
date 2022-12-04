@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +14,7 @@
   --green: springgreen;
 }
 body {
-  font-family: "Montserrat", sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
   cursor: pointer;
   background-color: var(--black);
 }
@@ -67,7 +68,6 @@ body {
 }
 .paragraph {
     font-size: 20px;
-    font-weight: 500;
     max-width: 400px;
 }
 
