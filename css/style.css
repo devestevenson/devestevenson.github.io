@@ -75,6 +75,7 @@ body {
 }
 .description span {
     color: var(--green-);
+    font-weight: var(--font-weight-bold-);
 }
 
 
