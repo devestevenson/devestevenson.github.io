@@ -7,7 +7,7 @@
     <title>estevenson company</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body onclick="playAudio()">
     
     <div id="particles-js"></div>
     <main class="homePage">
@@ -16,13 +16,13 @@
         </section>
 
         <section class="homeDescription">
-            <p data-value="3" class="description move">
+            <p data-value="4" class="description move">
                 soy un aspirante a <span>desarrollador web creativo.</span> tengo
                 conocimientos básicos en diseño y programación web. 
                 ofrezco servicios de diseño y desarrollo de sitios webs.
                 contáctame para más información.
             </p>
-            <button data-value="2" class="dropdown move">+ contáctame</button>
+            <button data-value="5" class="dropdown move">+ contáctame</button>
             <ul data-value="3" class="dropdownBox move">
                 <a class="dropdownLink whatsapp" href="https://api.whatsapp.com/send?phone=573022444817" target="_blank">whatsapp</a>
                 <a class="dropdownLink" href="#">linkedin</a>
@@ -32,11 +32,25 @@
         </section>
     </main>
 
+    <!--  -->
+    <div class="pre-loader">
+        <div class="content">
+            <div class="text">devestevenson, 2023</div>
+        </div>
+    </div>
+
+    <!-- audio -->
+    <audio autoplay loop class="audio">
+        <source src="./assets/space-atmospheric.mp3" type="audio/mp3">
+    </audio>
+
 
     <!-- PARTICLES -->
     <script src="./javascript/particles.min.js"></script>
     <script src="./javascript/particles.js"></script>
     <!-- // -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.1/dist/gsap.min.js"></script>
     <script src="./javascript/script.js"></script>
 </body>
 </html>

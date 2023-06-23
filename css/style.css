@@ -59,13 +59,13 @@ body {
     justify-content: space-around;
 
     padding: 6rem 0 0 0;
+
 }
 .name {
     color: var(--light-);
     font-size: 2rem;
     font-weight: var(--font-weight-bold-);
     line-height: 1.2;
-    /* opacity: .5; */
 }
 .description {
     color: var(--light-);
@@ -119,7 +119,7 @@ body {
     height: 60px;
     background-color: transparent;
     border: 1px solid transparent;
-    border-radius: 1rem;
+    border-radius: .7rem;
 
     color: var(--light-);
     font-size: 2rem;
@@ -138,6 +138,27 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.20);
 }
 
+.pre-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0F0F0F;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: var(--font-weight-bold-);
+    color: var(--black-);
+}
 
 
 /* RESPONSIVE */
