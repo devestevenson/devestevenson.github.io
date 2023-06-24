@@ -9,10 +9,10 @@ let dropdown = document.querySelector(".dropdown");
 let dropdownBox = document.querySelector(".dropdownBox");
 
 dropdown.addEventListener("click", function() {
-  if (dropdownBox.style.display === "none") {
-    dropdownBox.style.display = "block";
-  } else {
+  if (dropdownBox.style.display === "block") {
     dropdownBox.style.display = "none";
+  } else {
+    dropdownBox.style.display = "block";
   }
 });
 
