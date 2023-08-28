@@ -13,7 +13,7 @@
     --light-: #F0F0F0;
     --black-: #0F0F0F;
     --green-: #006E46;
-    --green-dark-: #002213;
+    --green-dark-: #00170d;
     --grad-40-: rgba(240, 240, 240, 0.4);
     --grad-5-: rgba(240, 240, 240, 0.05);
 
@@ -37,6 +37,7 @@ html {
 body {
     height: 100vh;
     font-family: var(--font-family);
+    padding: 24px;
     /* background-image: url(/assets/noise.svg); */
 }
 #particles-js {
@@ -148,5 +149,5 @@ main {
     color: var(--black-);
 }
 img {
-    width: 100px;
+    width: 80px;
 }
