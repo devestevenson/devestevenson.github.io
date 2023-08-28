@@ -3,54 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
     <title>devestevenson</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
-<body onclick="playAudio()">
-    
+<body>
     <div id="particles-js"></div>
-    <main class="homePage">
-        <section class="homeName">
-            <p data-value="2" class="name move">dev. <br><span>estevenson</span></p>
-        </section>
+    <main>
 
-        <section class="homeDescription">
-            <p data-value="4" class="description move">
-                soy un aspirante a <span>desarrollador web creativo.</span> tengo
-                conocimientos básicos en diseño y programación web. 
-                ofrezco servicios de diseño y desarrollo de sitios webs.
-                contáctame para más información.
-            </p>
-            <button data-value="5" class="dropdown move">+ info</button>
-            <ul data-value="3" class="dropdownBox move">
-                <a class="dropdownLink whatsapp" href="https://api.whatsapp.com/send?phone=573022444817" target="_blank">whatsapp</a>
-                <a class="dropdownLink" href="https://www.linkedin.com/in/devestevenson" target="_blank">linkedin</a>
-                <a class="dropdownLink" href="https://github.com/devestevenson?tab=repositories" target="_blank">github</a>
-                <a class="dropdownLink" href="https://dribbble.com/devestevenson" target="_blank">dribbble</a>
-            </ul>
-        </section>
+        <div data-value="4" class="card-container move" data-tilt data-tilt-scale="1.1" data-tilt-glare data-tilt-max-glare="0.1">
+            <div class="card-content">
+                <picture class="card-photo">
+                    <img src="/assets/photo.jpg" alt="">
+                </picture>
+                <h4 class="card-name move">devestevenson</h4>
+                <p class="card-paragraph">soy aspirante a <span>desarrollador web creativo</span>. ofrezco servicios de diseño y desarrollo de sitios web para personas y empresas.</p>
+                <div class="card-link">
+                    <a href="https://api.whatsapp.com/send?phone=573022444817" target="_blank"><i class="ph ph-whatsapp-logo"></i></a>
+                    <a href="https://www.linkedin.com/in/devestevenson" target="_blank"><i class="ph ph-linkedin-logo"></i></a>
+                    <a href="https://github.com/devestevenson?tab=repositories" target="_blank"><i class="ph ph-github-logo"></i></a>
+                    <a href="https://dribbble.com/devestevenson" target="_blank"><i class="ph ph-dribbble-logo"></i></a>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <!--  -->
+    <!-- PRELOADER -->
     <div class="pre-loader">
         <div class="content">
-            <div class="text">devestevenson, 2023</div>
+            <div class="text"><img src="/assets/hand-hello.gif" alt=""></div>
         </div>
     </div>
 
-    <!-- audio -->
-    <audio autoplay loop class="audio">
-        <source src="./assets/space-atmospheric.mp3" type="audio/mp3">
-    </audio>
-
-
-    <!-- PARTICLES -->
-    <script src="./javascript/particles.min.js"></script>
-    <script src="./javascript/particles.js"></script>
-    <!-- // -->
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.1/dist/gsap.min.js"></script>
-    <script src="./javascript/script.js"></script>
+<!-- PARTICLES -->
+<script src="./javascript/particles.min.js"></script>
+<script src="./javascript/particles.js"></script>
+<!-- VANILLA TILT -->
+<script src="/javascript/vanilla-tilt.js"></script>
+<!-- GSAP -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.1/dist/gsap.min.js"></script>
+<!-- SCRIPT -->
+<script src="/javascript/script.js"></script>
 </body>
 </html>

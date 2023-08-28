@@ -1,25 +1,25 @@
-/* CONFIGURACIÓN GENERAL */
+/* fonts */
 @font-face {
-    font-family: 'Sequel';
-    src: url(../assets/fonts/Sequel-Sans-Regular-Disp.otf);
+    font-family: 'SpaceGrotesk';
+    src: url(../assets/fonts/SpaceGrotesk-Regular.ttf);
     font-weight: 400;
 }
 @font-face {
-    font-family: 'Sequel';
-    src: url(../assets/fonts/Sequel-Sans-Bold-Disp.otf);
-    font-weight: 700;
+    font-family: 'SpaceGrotesk';
+    src: url(../assets/fonts/SpaceGrotesk-Medium.ttf);
+    font-weight: 500;
 }
 :root {
-    --black-: #0F0F0F;
-    --gray-: #707070;
     --light-: #F0F0F0;
-    --white-: #FFFFFF;
-    --green-dark-: #00160C;
-    --green-: #00ff91;
+    --black-: #0F0F0F;
+    --green-: #006E46;
+    --green-dark-: #002213;
+    --grad-40-: rgba(240, 240, 240, 0.4);
+    --grad-5-: rgba(240, 240, 240, 0.05);
 
-    --font-family: 'Sequel';
+    --font-family: 'SpaceGrotesk';
     --font-weight-regular-: 400;
-    --font-weight-bold-: 700;
+    --font-weight-medium-: 500;
 }
 * {
     box-sizing: border-box;
@@ -35,109 +35,97 @@ html {
     background: radial-gradient(ellipse at bottom, var(--green-dark-) 0%, var(--black-) 100%);
 }
 body {
-    background-image: url(../assets/noise.svg);
-    position: relative;
     height: 100vh;
-    
-    color: var(--light-);
     font-family: var(--font-family);
-
-    cursor: pointer;
+    /* background-image: url(/assets/noise.svg); */
 }
-/* -------------------------- */
-
-/* PARA DARLE CONTROL A LAS PARTICULAS */
 #particles-js {
     width: 100%;
     height: 100vh;
     position: fixed;
     z-index: -1;
 }
-.homePage {
-    height: 100%;
+main {
+    width: 100%;
+    height: 100vh;
 
     display: flex;
-    justify-content: space-around;
-
-    padding: 6rem 0 0 0;
-
-}
-.name {
-    color: var(--light-);
-    font-size: 2rem;
-    font-weight: var(--font-weight-bold-);
-    line-height: 1.2;
-}
-.description {
-    color: var(--light-);
-    max-width: 500px;
-    font-size: 2rem;
-    line-height: 1.3;
-}
-.description span {
-    color: var(--green-);
-    font-weight: var(--font-weight-bold-);
-}
-
-
-/* MENÚ DEZPLEGABLE (DROPDOWN) */
-.dropdown { 
-    width: 300px;
-    height: 60px;
-    background-color: rgba(70, 70, 70, 0.5);
-    border-radius: .8rem;
-    border: none;
-
-    color: var(--light-);
-    font-size: 2rem;
-    font-family: var(--font-family);
-    font-weight: var(--font-weight-bold-);
-
-    border: 1px solid transparent;
-
-    margin-top: 6.2rem;
-    cursor: pointer;
-}
-.dropdown:hover {
-    color: var(--green-);
-    border: 1px solid rgba(255, 255, 255, 0.30);
-}
-.dropdownBox {
-    display: none;
-    width: 300px;
-    height: 280px;
-    background-color: rgba(70, 70, 70, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.20);
-    border-radius: .8rem;
-
-    margin-top: 1.6rem;
-    padding: 2rem;
-
-}
-
-.dropdownLink {
-    display: block;
-    height: 60px;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: .7rem;
-
-    color: var(--light-);
-    font-size: 2rem;
-    font-weight: var(--font-weight-bold-);
-
-    padding: 0 3rem;
-
-    display: flex;
+    justify-content: center;
     align-items: center;
 }
-.whatsapp {
-    color: var(--green-);
+.card-container {
+    max-width: 48rem;
+    height: auto;
+    border: 2px solid rgba(240, 240, 240, 0.1);
+    border-radius: 1.6rem;
+    padding: 3.2rem;
+    background-color:rgba(15, 15, 15, 0.1);
+    backdrop-filter: blur(1px);
+    cursor: pointer;
 }
-.dropdownLink:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.20);
+.card-photo {
+    display: block;
+    width: 12rem;
+    height: 12rem;
+    border: 4px solid rgba(240, 240, 240, 0.1);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 16px;
 }
+.card-photo img {
+    width: 100%;
+}
+.card-name {
+    color: #f0f0f0;
+    font-size: 3rem;
+    font-weight: var(--font-weight-medium-);
+    margin-bottom: 8px;
+    text-align: center;
+}
+.card-paragraph {
+    max-width: 420px;
+    color: #f0f0f0;
+    font-size: 1.8rem;
+    font-weight: var(--font-weight-regular-);
+    margin-bottom: 40px;
+    text-align: center;
+}
+.card-paragraph span {
+    color: #006E46;
+}
+.card-link {
+    display: flex;
+    max-width: max-content;
+    border: 1px solid rgba(240, 240, 240, 0.1);
+    border-radius: 3.2rem;
+    padding: 1.6rem;
+    margin: auto;
+}
+.card-link a i {
+    font-size: 3rem;
+    color: #f0f0f0;
+    border: 1px solid transparent;
+    padding: 8px;
+    border-radius: 50%;
+}
+.card-link a i:hover {
+    background-color: rgba(240, 240, 240, 0.05);
+}
+.card-link a:nth-child(1) i:hover {
+    color: springgreen;
+}
+.card-link a:nth-child(2) i:hover {
+    color: #0e76a8;
+}
+.card-link a:nth-child(3) i:hover {
+    color: #000000;
+}
+.card-link a:nth-child(4) i:hover {
+    color: #ea4c89;
+}
+
+
 
 .pre-loader {
     position: fixed;
@@ -145,11 +133,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--white-);
+    background-color: var(--light-);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #0F0F0F;
 }
 .content {
     display: flex;
@@ -157,33 +144,9 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 3rem;
-    font-weight: var(--font-weight-bold-);
+    font-weight: var(--font-weight-medium-);
     color: var(--black-);
 }
-
-
-/* RESPONSIVE */
-@media (max-width: 767px) {
-    .homePage {
-        height: auto;
-
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 32px;
-
-        padding: 3.2rem;
-    }
-}
-@media (max-width: 300px) {
-    .homePage {
-        padding: 2rem;
-        gap: 28px;
-    }
-    .dropdown {
-        width: 240px;
-        margin-top: 5rem;
-    }
-    .dropdownBox {
-        width: 240px;
-    }
+img {
+    width: 100px;
 }
