@@ -1,0 +1,107 @@
+---
+import ProjectCard from "../UI/ProjectCard.astro"
+---
+
+<main class="w-full max-w-[491px]">
+    <header class="grid gap-3 mb-10">
+        <h1 class="text-base">
+            Hola, soy
+            <span class="font-semibold">Estevenson,</span>
+             <span class="font-semibold">Diseñador UX/UI Junior</span>
+        </h1>
+        <p class="max-w-[491px] text-base">
+            Disfruto diseñar productos y servicios digitales: aplicaciones web
+            y móviles, sitios web, tiendas virtuales, entre otros, con el objetivo
+            de mejorar la experiencia del usuario.
+        </p>
+    </header>
+
+    <section class="grid gap-3 mb-10">
+        <h2 class="text-base font-semibold">Habilidades</h2>
+        <p class="max-w-[487px] text-base">
+            Durante mi formación, he adquirido habilidades que me permiten
+            diseñar y desarrollar proyectos.
+        </p>
+        <article>
+            <p class="text-base font-semibold">Diseño web</p>
+            <ul>
+                <li class="text-base">Figma</li>
+                <li class="text-base">Adobe XD</li>
+                <li class="text-base">Photoshop</li>
+            </ul>
+        </article>
+
+        <article>
+            <p class="text-base font-semibold">Diseño web</p>
+            <ul>
+                <li class="text-base">HTML</li>
+                <li class="text-base">CSS</li>
+                <li class="text-base">JavaScript</li>
+                <li class="text-base">React</li>
+                <li class="text-base">TailwindCSS</li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="grid gap-3 mb-10">
+        <h2 class="font-semibold text-base">Trabajos realizados</h2>
+        <p class="max-w-[487px] text-base">
+            Te invito a echar un vistazo a mi portafolio para descubrir cómo
+            he combinado mis habilidades en diseño y desarrollo para crear
+            sitios web funcionales que cumplen con los objetivos de la marca.
+        </p>
+        <ProjectCard
+            href="https://devestevenson.github.io/"
+            text="Web personal"
+            icon="↗"
+        />
+        <ProjectCard
+            href="https://www.codigoc13.com/"
+            text="Escuela Código C13"
+            icon="↗"
+        />
+    </section>
+
+    <section class="grid gap-3 mb-10">
+        <h2 class="font-semibold text-base">Envíame un mensaje</h2>
+        <p class="max-w-[478px] text-base">
+            Estoy dando mis primeros pasos, espero participar en proyectos
+            donde pueda aplicar mis conocimientos y experiencias para
+            contribuir al éxito de cada producto.
+        </p>
+    </section>
+
+    <footer class="grid gap-5">
+        <ul class="flex flex-col gap-2">
+            <a href="tel:+">(+57) 302 244 4817</a>
+            <a href="mailto:">devestevenson@gmail.com</a>
+        </ul>
+        <ul class="flex flex-col gap-2">
+            <a href="">Linkedin</a>
+            <a href="">Behance</a>
+            <a href="">Github</a>
+            <a href="">Youtube</a>
+        </ul>
+    </footer>
+</main>
+
+<style>
+    a {
+        position: relative;
+        transition: 300ms ease;
+        width: fit-content;
+    }
+    a::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: black;
+        transition: 300ms ease;
+    }
+    a:hover::before {
+        width: 100%;
+    }
+</style>
