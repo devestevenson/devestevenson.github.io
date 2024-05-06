@@ -2,23 +2,29 @@
 interface Props {
     href: string;
     text: string;
-    icon: string;
 }
 
-const { href, text, icon } = Astro.props;
+const { href, text } = Astro.props;
 ---
 
 <section>
     <a href={href} target="_blank" class="w-full bg-[#ededed] p-6 rounded flex justify-between items-center">
         <span class="text-base">{text}</span>
-        <span class="text-base sp">{icon}</span>
+        <i class="ph ph-arrow-up-right"></i>
     </a>
 </section>
 
 <style>
-    a:hover .sp {
+    a:hover .ph {
         transform: translateY(-4px);
         transition: 300ms ease;
+    }
+    a:hover span {
+        transform: translateX(4px);
+        transition: 300ms;
+    }
+    i {
+        font-size: 20px;
     }
 </style>
 

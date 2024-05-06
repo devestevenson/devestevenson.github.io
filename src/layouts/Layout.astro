@@ -16,16 +16,25 @@ import '@fontsource-variable/lora';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css"/>
 		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
 	</body>
-</html>
-<style is:global>
-	body {
-  		font-family: 'Lora Variable', serif;
-		color: #000000;
-		background-color: #FFFFFF;
-	}
-</style>
+	</html>
+	<style is:global>
+		html {
+			font-family: 'Lora Variable', serif;
+			color: #000000;
+			background-color: #FFFFFF;
+		}
+		</style>
+
+
+<script is:inline src="https://unpkg.com/@phosphor-icons/web"></script>
+<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script is:inline>
+	AOS.init();
+</script>
