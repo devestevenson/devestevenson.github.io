@@ -15,6 +15,11 @@ export default {
 				mywhite: '#F1F1F1',
 				myblack: '#1F1F1F',
 			},
+			fontFamily: {
+				fontBS: [
+					'Bahnschrift'
+				]
+			}
 		},
 	},
 	plugins: [],
